@@ -33,6 +33,11 @@ function mapToBuffer() {
     };
   });
 }
+function mapToConsole() {
+  METHODS.map(type => {
+    console[type] = REFERENCE[type];
+  });
+}
 
 function mapToProcessing() {
   METHODS.map(type => {
@@ -64,8 +69,6 @@ function requestId() {
   return `request-${uuidv4()}`;
 }
 
-mapToBuffer();
-
 const CLIENT = clientId();
 const SESSION = sessionId();
 const REQUEST = requestId();
@@ -75,7 +78,15 @@ function initializeIntern() {
     `${process.env.CLOUDLOG_API_URL ||
       "https://api.cloudlog.dev/v0"}/sdk-auth?user=${USER}&project=${PROJECT}`
   )
-    .then(res => res.json())
+    .then(res => {
+      if (!res.ok) {
+        mapToConsole();
+        throw new Error("cloudlog credentials wrong");
+      }
+      if (res.ok) {
+        res.json();
+      }
+    })
     .then(iotKeys => {
       TOPIC = iotKeys.topic;
       AWSIOTCLIENT = awsIot.device({
@@ -132,5 +143,10 @@ function processing(message) {
 module.exports.initialize = function(c, p, params = {}) {
   USER = c;
   PROJECT = p;
+  if (!c || !p) {
+    throw new Error("cloudlog credentials missing");
+    return;
+  }
+  mapToBuffer();
   initializeIntern();
 };
