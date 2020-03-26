@@ -129,8 +129,8 @@ function processing(message) {
   AWSIOTCLIENT.publish(TOPIC, JSON.stringify(message)); // send messages
 }
 
-export function initialize(c, p, params = {}) {
+module.exports.initialize = function(c, p, params = {}) {
   USER = c;
   PROJECT = p;
   initializeIntern();
-}
+};
