@@ -70,7 +70,7 @@ const CLIENT = clientId();
 const SESSION = sessionId();
 const REQUEST = requestId();
 
-function initialize() {
+function initializeIntern() {
   fetch(
     `${process.env.CLOUDLOG_API_URL ||
       "https://api.cloudlog.dev/v0"}/sdk-auth?user=${USER}&project=${PROJECT}`
@@ -129,10 +129,8 @@ function processing(message) {
   AWSIOTCLIENT.publish(TOPIC, JSON.stringify(message)); // send messages
 }
 
-export default {
-  initialize: function(c, p, params = {}) {
-    USER = c;
-    PROJECT = p;
-    initialize();
-  }
-};
+export function initialize(c, p, params = {}) {
+  USER = c;
+  PROJECT = p;
+  initializeIntern();
+}

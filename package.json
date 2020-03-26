@@ -7,8 +7,8 @@
   "author": "Klaus Breyer <klaus@cloudlog.dev> (https://www.cloudlog.dev)",
   "license": "MIT",
   "scripts": {
-    "start": "parcel index.js --port 2005",
-    "build": "rm -rf ./dist && yarn parcel build index.js &&  echo 'sdk.cloudlog.dev' > ./dist/CNAME"
+    "start": "parcel browser.js --port 2005",
+    "build": "rm -rf ./dist && yarn parcel build index.js && yarn parcel build browser.js && echo 'sdk.cloudlog.dev' > ./dist/CNAME"
   },
   "dependencies": {
     "aws-iot-device-sdk": "^2.2.3",
