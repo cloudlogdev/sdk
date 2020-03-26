@@ -1,0 +1,27 @@
+name: Deploy sdk
+
+on: [push]
+
+jobs:
+  deploy:
+    name: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: yarn install
+        uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: install
+      - name: yarn build
+        uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: build
+        env:
+          CLOUDLOG_API_URL: ${{ secrets.CLOUDLOG_API_URL }}
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          external_repository: klausbreyer/cloudlog-sdk-gh-pages
+          publish_branch: master
+          publish_dir: ./dist
