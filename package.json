@@ -1,6 +1,6 @@
 {
   "name": "cloudlog",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "https://www.cloudlog.dev SDK",
   "main": "index.js",
   "repository": "https://github.com/cloudlogdev/sdk",
