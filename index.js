@@ -84,7 +84,7 @@ function initializeIntern() {
         throw new Error("cloudlog credentials wrong");
       }
       if (res.ok) {
-        res.json();
+        return res.json();
       }
     })
     .then(iotKeys => {

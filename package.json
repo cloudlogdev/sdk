@@ -6,6 +6,9 @@
   "repository": "https://github.com/cloudlogdev/sdk",
   "author": "Klaus Breyer <klaus@cloudlog.dev> (https://www.cloudlog.dev)",
   "license": "MIT",
+  "browserslist": [
+    "defaults"
+  ],
   "scripts": {
     "start": "parcel browser.js --port 2005",
     "build": "rm -rf ./dist && yarn parcel build index.js && yarn parcel build browser.js && echo 'sdk.cloudlog.dev' > ./dist/CNAME"
