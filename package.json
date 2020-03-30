@@ -1,6 +1,6 @@
 {
   "name": "cloudlog",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Use your own local browser console to debug the weirdest browser in the most remote locations.",
   "homepage": "https://www.cloudlog.dev",
   "main": "index.js",
