@@ -45,6 +45,8 @@ Just put that snippet as very first &#x3C;script&#x3E; Tag in any site with some
 
 Once integrated, you can return to [ui.cloudlog.dev](https://ui.cloudlog.dev) and start receiving your logs.
 
+![View Logs in the UI](https://www.cloudlog.dev/screens/streaming.png)
+
 ## Support
 
 - For Bugs / Feedback on the SDK please create an issue.
