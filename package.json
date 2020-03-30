@@ -1,11 +1,24 @@
 {
   "name": "cloudlog",
   "version": "0.1.5",
-  "description": "https://www.cloudlog.dev SDK",
+  "description": "Use your own local browser console to debug the weirdest browser in the most remote locations.",
+  "homepage": "https://www.cloudlog.dev",
   "main": "index.js",
   "repository": "https://github.com/cloudlogdev/sdk",
   "author": "Klaus Breyer <klaus@cloudlog.dev> (https://www.cloudlog.dev)",
+  "engines": {
+    "node": "*"
+  },
   "license": "MIT",
+  "keywords": [
+    "console",
+    "console.log",
+    "debugging",
+    "cloud",
+    "developertool",
+    "tooling",
+    "frontendtooling"
+  ],
   "browserslist": [
     "defaults"
   ],
