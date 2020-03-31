@@ -1,6 +1,6 @@
 # cloudlog - console.log realtime streaming
 
-Debug remote browsers by getting their console log output streamed into your local browser console.
+Debug remote browsers by getting their console.log output streamed into your local browser console.
 
 ## Quickstart
 
