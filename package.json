@@ -1,7 +1,7 @@
 {
   "name": "cloudlog",
-  "version": "0.1.7",
-  "description": "Use your own local browser console to debug the weirdest browser in the most remote locations.",
+  "version": "0.1.8",
+  "description": "Debug remote browsers by getting their console log output streamed into your local browser console. ",
   "homepage": "https://www.cloudlog.dev",
   "main": "index.js",
   "repository": "https://github.com/cloudlogdev/sdk",
