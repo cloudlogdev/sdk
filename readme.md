@@ -1,6 +1,6 @@
-# cloudlog - The console.log cloud solution
+# cloudlog - console.log realtime streaming
 
-Use your own local browser console to debug the weirdest browser in the most remote locations.
+Debug remote browsers by getting their console log output streamed into your local browser console.
 
 ## Quickstart
 
