@@ -22,6 +22,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{ secrets.PERSONAL_TOKEN }}
-          external_repository: klausbreyer/cloudlog-sdk-gh-pages
+          external_repository: cloudlogdev/sdk-gh-pages
           publish_branch: master
           publish_dir: ./dist
